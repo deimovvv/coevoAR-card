@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const {renderer, scene, camera} = mindarThree;
 
     // VIDEO
-    const video = await loadVideo("./assets/videos/videotest.mp4")
-    const texture = new THREE.VideoTexture(video);
+    /* const video = await loadVideo("./assets/videos/videotest.mp4") */
+    /* const texture = new THREE.VideoTexture(video); */
 
     const geometry = new THREE.PlaneGeometry(0.5,1080/1920)
-    const material = new THREE.MeshBasicMaterial({map: texture})
+    const material = new THREE.MeshBasicMaterial({color: 0xff00ff})
     const plane = new THREE.Mesh(geometry, material)
     plane.position.set(0.1,0,0)
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const anchor = mindarThree.addAnchor(0);
     anchor.group.add(gltf.scene, plane);
 
-    anchor.onTargetFound = () => {
+   /*  anchor.onTargetFound = () => {
       video.play()
     }
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video.addEventListener("play", () => {
       video.currentTime = 6;
     })
-
+ */
     //gltf animations
 
     const mixer = new THREE.AnimationMixer(gltf.scene)
