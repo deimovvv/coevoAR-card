@@ -16,15 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // VIDEO
     /* const video = await loadVideo("./assets/videos/videotest.mp4") */
     /* const texture = new THREE.VideoTexture(video); */
+    const texture = new THREE.TextureLoader().load('/assets/images/BosqueDeimov.png' ); 
 
     const geometry = new THREE.PlaneGeometry(0.5,1080/1920)
-    const material = new THREE.MeshBasicMaterial({color: 0xff00ff})
+    const material = new THREE.MeshBasicMaterial({map:texture})
     const plane = new THREE.Mesh(geometry, material)
-    plane.position.set(0.1,0,0)
+    plane.position.set(0.6,0,0)
 
  
     //LIGHT
-    const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 100 );
+    const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 50 );
     scene.add(light);
 
     // MODEL
