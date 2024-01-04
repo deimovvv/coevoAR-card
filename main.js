@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gltf = await loadGLTF('/assets/models/ImagenLogoCoevo4+Animation.gltf');
     gltf.scene.scale.set(0.8, 0.8, 0.8);
     gltf.scene.rotation.set(90, 0, 0);
-    gltf.scene.position.set(0, 0.55, 0);
+    gltf.scene.position.set(0, 0.4, 0);
 
     // CSS RENDER
     /* const obj = new CSS3DObject(document.querySelector("#ar-div")) */
