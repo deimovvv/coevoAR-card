@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const geometry = new THREE.PlaneGeometry(0.5,1080/1920)
     const material = new THREE.MeshBasicMaterial({map: texture})
     const plane = new THREE.Mesh(geometry, material)
-    plane.position.set(0,0,0)
+    plane.position.set(0.1,0,0)
 
  
     //LIGHT
