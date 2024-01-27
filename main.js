@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // VIDEO
     /* const video = await loadVideo("./assets/videos/videotest.mp4") */
     /* const texture = new THREE.VideoTexture(video); */
-    const texture = new THREE.TextureLoader().load('/assets/images/test.png' ); 
+    /* const texture = new THREE.TextureLoader().load('/assets/images/test.png' ); 
 
     const geometry = new THREE.PlaneGeometry(0.5,1080/1920)
     const material = new THREE.MeshBasicMaterial({map:texture})
     const plane = new THREE.Mesh(geometry, material)
-    plane.position.set(0.7,0,0)
+    plane.position.set(0.7,0,0) */
 
     const texture2 = new THREE.TextureLoader().load('/assets/images/About.png' ); 
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // AR ANCHOR
     const anchor = mindarThree.addAnchor(0);
-    anchor.group.add(gltf.scene, plane, plane2);
+    anchor.group.add(gltf.scene,plane2);
 
    /*  anchor.onTargetFound = () => {
       video.play()
